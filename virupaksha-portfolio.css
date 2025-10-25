@@ -1,0 +1,282 @@
+:root{
+      --bg: #f7f9fc;
+      --font-sans: 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+      --nav-height: 68px;
+      --card-radius: 12px;
+      --glass: rgba(255,255,255,0.7);
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0;background:var(--bg);font-family:var(--font-sans);color:#213547}
+
+    /* NAV */
+    header{position:fixed;inset:0 0 auto 0;height:var(--nav-height);display:flex;align-items:center;justify-content:space-between;padding:12px 28px;backdrop-filter:blur(6px);z-index:50}
+    header .brand{font-weight:700;color:#4b5563}
+    nav ul{display:flex;gap:18px;list-style:none;margin:0;padding:0;align-items:center}
+    nav a{color:#334e68;text-decoration:none;font-weight:600}
+    nav a:hover{opacity:0.85}
+    .cta{padding:8px 14px;border-radius:999px;background:linear-gradient(90deg,#6b9bd6,#8ed1c4);color:white;font-weight:700;text-decoration:none}
+
+    main{padding-top:calc(var(--nav-height) + 30px)}
+
+    /* Sections */
+    section{padding:64px 20px;max-width:1100px;margin:0 auto}
+    .hero{display:grid;grid-template-columns:1fr 360px;gap:36px;align-items:center}
+    .hero .intro h1{font-size:40px;margin:0 0 8px}
+    .hero .intro p.lead{margin:0 0 18px;opacity:0.8;line-height:1.45}
+    .hero .buttons{display:flex;gap:12px}
+    .btn{padding:10px 18px;border-radius:10px;text-decoration:none;font-weight:700}
+    .btn.primary{background:linear-gradient(90deg,#a7d8ff,#cde7ff);color:#052b49}
+    .btn.ghost{background:linear-gradient(90deg, #7fe3a7, #cdefcf);color:#052b49}
+    .hero .photo{justify-self:end}
+    .profile-pic {  width: 100%;max-width: 300px;height: auto;border-radius: 18px;object-fit: contain;box-shadow: 0 18px 30px rgba(26, 40, 72, 0.08);
+  border: 6px solid white;
+  background-color: #f4f4f4; /* optional: fills background if aspect ratio differs */
+}
+
+    /* About */
+    .about{margin-top:36px;text-align:center}
+    .about p{max-width:780px;margin:10px auto 0;opacity:0.85}
+
+    /* Stats */
+    .stats {  display: flex;
+  gap: 40px;              /* more gap for 2 cards */
+  justify-content: center; /* center the cards horizontally */
+  margin-top: 28px;
+  flex-wrap: wrap;         /* optional, in case of small screens */
+}
+
+.stat {
+  background: var(--glass);
+  padding: 10px;           /* slightly bigger padding for balance */
+  border-radius: 12px;
+  min-width: 250px;        /* wider cards for 2-card layout */
+  max-width: 300px;        /* optional to limit width */
+  text-align: center;      /* center the text */
+  box-shadow: 0 12px 24px rgba(34,60,80,0.06);
+}
+
+.stat h3 {
+  margin: 0;
+  font-size: 20px;         /* slightly larger for emphasis */
+}
+
+.stat p {
+  margin: 8px 0 0;
+  opacity: 0.75;
+}
+
+
+    /* Skills */
+    .skills-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px;margin-top:32px}
+    .skill-card{padding:18px;border-radius:10px;background:white;border:1px solid rgba(25,40,60,0.04);box-shadow:0 8px 18px rgba(20,40,70,0.04)}
+    .skill-card h4{margin:0 0 8px}
+    .skill-card small{opacity:0.7}
+
+    /* Projects */
+    .projects{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px;margin-top:28px}
+    .project{background:linear-gradient(180deg,#ffffff,#fbfdff);padding:16px;border-radius:12px;border:1px solid rgba(10,20,40,0.03);box-shadow:0 12px 24px rgba(20,40,70,0.04)}
+    .project h5{margin:0 0 8px}
+    .project p{margin:0;opacity:0.75}
+
+    /* Contact */
+    .contact-grid{display:grid;grid-template-columns:1fr 380px;gap:28px;align-items:start}
+    .contact-card{padding:20px;border-radius:12px;background:linear-gradient(180deg,#ffffff,#fbfcff);box-shadow:0 16px 30px rgba(22,36,60,0.04)}
+    form .row{display:flex;gap:12px}
+    form input, form textarea{width:100%;padding:12px;border-radius:10px;border:1px solid rgba(34,60,80,0.06);outline:none}
+    form button{margin-top:10px;padding:12px 18px;border-radius:10px;border:none;background:linear-gradient(90deg,#7fc6ff,#b8f0d9);font-weight:700}
+
+    footer{text-align:center;padding:22px 0;margin-top:18px;background:transparent}
+
+    /* Responsiveness */
+    @media (max-width:900px){
+      .hero{grid-template-columns:1fr; text-align:center}
+      .hero .photo{justify-self:center}
+      .contact-grid{grid-template-columns:1fr}
+      header{padding:10px 16px}
+    }
+
+    /* Pastel section backgrounds */
+    section[data-bg="lavender"]{background:linear-gradient(180deg,#fbf8ff,#f3efff)}
+    section[data-bg="mint"]{background:linear-gradient(180deg,#f7fffb,#f0fff6)}
+    section[data-bg="sky"]{background:linear-gradient(180deg,#f6fbff,#f0f8ff)}
+    section[data-bg="peach"]{background:linear-gradient(180deg,#fff9f6,#fff6f2)}
+
+    /* Smooth scroll */
+    html{scroll-behavior:smooth}
+
+    /* === Unified 3-column Grid Layout for Sections === */
+.skills-grid,
+.projects,
+.certi,
+.achievements-grid,
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 22px;
+  margin-top: 28px;
+}
+
+/* === Common Card Design for All Sections === */
+.skill-card,
+.project,
+.certi > div,
+.achievement,
+.contact-card {
+  background: linear-gradient(180deg, #ffffff, #f9fbff);
+  border-radius: var(--card-radius);
+  box-shadow: 0 6px 16px rgba(20, 40, 70, 0.06);
+  padding: 20px;
+  border: 1px solid rgba(0, 0, 0, 0.04);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
+}
+
+/* === Hover Animations for Cards === */
+.skill-card:hover,
+.project:hover,
+.certi > div:hover,
+.achievement:hover,
+.contact-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 22px rgba(20, 40, 70, 0.1);
+  background: linear-gradient(180deg, #fdfcff, #f3faff);
+}
+
+/* === Subtle Heading & Paragraph Styling === */
+.skill-card h4,
+.project h5,
+.certi h5,
+.achievement h5,
+.contact-card h4 {
+  color: #1e355b;
+  
+}
+
+.skill-card small,
+.project p,
+.certi p,
+.achievement p,
+.contact-card p {
+  opacity: 0.8;
+  line-height: 1.5;
+}
+
+/* === Section Background Gradients === */
+section[data-bg="lavender"] { background: linear-gradient(180deg, #fbf8ff, #f3efff); }
+section[data-bg="mint"] { background: linear-gradient(180deg, #f7fffb, #f0fff6); }
+section[data-bg="sky"] { background: linear-gradient(180deg, #f6fbff, #f0f8ff); }
+section[data-bg="peach"] { background: linear-gradient(180deg, #fff9f6, #fff6f2); }
+section[data-bg="lemon"] { background: linear-gradient(180deg, #fffef5, #fffbe8); }
+section[data-bg="rose"] { background: linear-gradient(180deg, #fff0f5, #ffe6f0); }
+section[data-bg="aqua"] { background: linear-gradient(180deg, #e0ffff, #ccf5ff); }
+
+/* === Achievement Grid Cards === */
+.achievement {
+  text-align: center;
+}
+.achievement h5 {
+  font-size: 18px;
+  color: #2b3e5b;
+}
+.achievement p {
+  font-size: 15px;
+  opacity: 0.85;
+}
+
+/* === Contact Form Hover Effect === */
+form input:focus,
+form textarea:focus {
+  border-color: #7fc6ff;
+  box-shadow: 0 0 8px rgba(127, 198, 255, 0.4);
+}
+
+/* === Responsiveness === */
+@media (max-width: 900px) {
+  .skills-grid,
+  .projects,
+  .certi,
+  .achievements-grid,
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* === Certificate Images Styling === */
+.certi img {
+  width: 100%;              /* Make image fill the card width */
+  height: 180px;            /* Fixed height for uniform look */
+  object-fit:scale-down ;        /* Crop image neatly if aspect ratio differs */
+  border-radius: 8px;       /* Slight rounding to match card style */
+  margin-top: 10px;         /* Add spacing above image */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05); /* Optional subtle shadow */
+}
+
+.certi > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+
+/* === Achievements / Achieved Section Styling === */
+.achieved {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* same as other grids */
+  gap: 22px;
+  margin-top: 28px;
+}
+
+.achieved > div {
+  background: linear-gradient(180deg, #ffffff, #f9fbff);  /* same card background */
+  border-radius: var(--card-radius);
+  box-shadow: 0 6px 16px rgba(20, 40, 70, 0.06);
+  padding: 20px;
+  border: 1px solid rgba(0, 0, 0, 0.04);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
+  text-align: center; /* headings centered */
+}
+
+.achieved > div:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 22px rgba(20, 40, 70, 0.1);
+  background: linear-gradient(180deg, #fdfcff, #f3faff);
+}
+
+/* Headings inside achievements */
+.achieved h5, .achieved h4 {
+  color: #1e355b;
+  margin-bottom: 8px;
+  text-align: center; /* headings centered */
+}
+
+/* Paragraphs inside achievements */
+.achieved p {
+  opacity: 0.8;
+  line-height: 1.5;
+  text-align: left; /* paragraphs left-aligned */
+}
+
+/* #Achieved card styling */
+#Achieved {
+  background: linear-gradient(180deg, #ffffff, #f9fbff);
+  border-radius: var(--card-radius);
+  box-shadow: 0 6px 16px rgba(20, 40, 70, 0.06);
+  padding: 20px;
+  border: 1px solid rgba(0, 0, 0, 0.04);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
+  text-align: center; /* headings centered */
+}
+
+#Achieved h4, #Achieved h5 {
+  text-align: center;
+}
+
+#Achieved p {
+  text-align: left; /* paragraph left-aligned */
+}
+
+#Achieved:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 22px rgba(20, 40, 70, 0.1);
+  background: linear-gradient(180deg, #fdfcff, #f3faff);
+}
