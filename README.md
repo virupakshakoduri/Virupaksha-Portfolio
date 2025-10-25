@@ -1,15 +1,15 @@
 ## **Professional Overview: Virupaksha Koduri**
 
-Virupaksha Koduri is a dynamic **Software Developer Fresher** with a specialization in **AI/ML**, demonstrating proficiency across the full development spectrum, from robust back-end systems to user-friendly web interfaces. With a core focus on combining **design awareness with engineering discipline**, Virupaksha is positioned to excel as a **Junior Software Engineer**.
+Virupaksha Koduri is a dynamic **Software Developer enthusiast** with a specialization in **AI/ML**,**Devops**,**Full Stack Development** demonstrating proficiency across the full development spectrum, from robust back-end systems to user-friendly web interfaces. With a core focus on combining **design awareness with engineering discipline**, Virupaksha is positioned to excel as a **Junior Software Developer**.
 
 ### **Technical Expertise & Skills**
 
 Virupaksha's technical foundation is both broad and modern, covering essential stacks for AI and full-stack development:
 
 * **Frontend Development:** Proficient in creating responsive web interfaces using **HTML, CSS, JavaScript**, and the modern framework **React.js**.
-* **DevOps & Cloud:** Familiar with containerization and orchestration using **Docker** and **Kubernetes**, alongside continuous integration/delivery tools like **Jenkins** and configuration management with **Ansible**.
+* **DevOps & Cloud:** Familiar with containerization and orchestration using **Docker** and **Kubernetes**, alongside continuous integration/delivery tools like **Jenkins** and configuration management with **Ansible** and **Cloud Computing** (validated by the **Ultimate AWS Certified Cloud Practitioner** certification).
 * **Machine Learning Models:** Expertise in a variety of classification and boosting algorithms, including **Decision Tree, Random Forest, SVM, Extra Boost, Adaboost, and Light GBM**.
-* **Core AI/ML Concepts:** Formal training in **OpenCV, NLP, Project Planning,** and **Cloud Computing** (validated by the **Ultimate AWS Certified Cloud Practitioner** certification).
+* **Core AI/ML Concepts:** Trained in **AI,ML,OpenCV, NLP,**.
 
 ### **Featured Projects & Demonstrated Ability**
 
@@ -17,7 +17,6 @@ The portfolio highlights practical application of skills, with a strong emphasis
 
 * **Object Detection using YOLOv8:** Developed a high-accuracy computer vision model for **grape detection**. This project involved dataset collection, formatting with Roboflow, and training the model on Google Colab (T4 GPU), resulting in an impressive **97% accuracy** for precision agriculture, demonstrating deep CV expertise.
 * **Student Alcohol Consumption Detection:** Executed a comprehensive data analysis project, performing crucial steps like data cleaning, large dataset merging, and **Exploratory Data Analysis (EDA)**. This showcases analytical and problem-solving skills to derive insights from complex socio-demographic and academic data.
-* **Portfolio Website:** Built a personal site using modern CSS and responsive design, serving as a direct testament to front-end development capabilities.
 
 ### **Certifications and Professional Development**
 
@@ -39,5 +38,5 @@ Beyond technical skills, the profile demonstrates strong communication and leade
 
 **Contact:**
 * **Email:** virupakshakoduri11@gmail.com
-* **GitHub:** virupakshakoduri
-* **LinkedIn:** virupaksha-koduri-215984265
+* **GitHub:** https://github.com/virupakshakoduri
+* **LinkedIn:** www.linkedin.com/in/virupaksha-koduri-215984265
