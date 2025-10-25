@@ -1,0 +1,114 @@
+/* style.css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+}
+
+.sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 250px;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 1000;
+    animation: slideIn 1s ease-out;
+    overflow-y: auto;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.nav {
+    padding: 2rem 0;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.nav-item {
+    position: relative;
+    width: 100%;
+}
+
+.nav-link {
+    display: block;
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+    padding: 1rem 2rem;
+    transition: color 0.3s ease, background-color 0.3s ease, transform 0.3s ease;
+    border-left: 4px solid transparent;
+}
+
+.nav-link:hover {
+    color: #00ff88;
+    background-color: rgba(0, 255, 136, 0.1);
+    border-left-color: #00ff88;
+    transform: translateX(10px);
+    animation: pulse 0.6s ease-in-out;
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(0, 255, 136, 0.7);
+    }
+    70% {
+        box-shadow: 0 0 0 10px rgba(0, 255, 136, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(0, 255, 136, 0);
+    }
+}
+
+.main-content {
+    margin-left: 250px;
+    padding: 2rem;
+    flex: 1;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+        transform: none;
+        animation: none;
+    }
+    
+    .nav-list {
+        flex-direction: row;
+        justify-content: center;
+        gap: 2rem;
+    }
+    
+    .nav-link {
+        padding: 0.5rem 1rem;
+        border-left: none;
+        border-bottom: none;
+    }
+    
+    .main-content {
+        margin-left: 0;
+    }
+}
